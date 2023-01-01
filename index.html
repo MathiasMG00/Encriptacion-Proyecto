@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de Encriptación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="contenedor">
+        <span>Encriptador</span>
+        <div class="bloque bl1">
+            <textarea id="texto_ingreso" rows="15" placeholder="Ingrese el texto aquí"></textarea>
+            <div id="aviso">
+                <img src="/img/alert.png" alt=""> &nbsp;
+                <p>Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div id="boton_b1">
+                <button class="btn1 encriptar" onclick="encrypt()">Encriptar</button>
+                <button class="btn1 desencriptar" onclick="decrypt()">Desencriptar</button>
+            </div>
+        </div>
+        <div class="bloque bl2">
+            <div id="espera">
+                <div class="estado est1">
+                    <img src="/img/espera.png" alt="">
+                    <p id="p_uno">Ningún mensaje encontrado</p>
+                    <p id="p_dos">Introduzca el texto que desea cifrar o descifrar.</p>
+                </div>
+            </div>
+            <div id="resultado">
+                <div class="estado est2">
+                    <textarea id="texto_resultado" rows="15"></textarea>
+                    <button class="btn2 copiar" onclick="copy()">Copiar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

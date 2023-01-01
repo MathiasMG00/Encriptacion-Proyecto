@@ -1,0 +1,267 @@
+body {
+    background-color: #F3F5FC;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    margin: 25px 35px 25px 25px;
+    min-height: 100%
+}
+
+#contenedor {
+    position: absolute;
+    padding: 50px auto;
+    width: calc(100% - 60px);
+    display: flex;
+    justify-content: stretch;
+}
+
+/* Titulo */
+span { 
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    font-size: 24px;
+    font-family: cursive;
+    text-shadow: 0 0 1em blue
+}
+
+/* Bloques */
+.bloque {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+.bl1 {
+    flex-grow: 4;
+}
+
+.bl2 {
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 32px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* Textareas */
+textarea {
+    height: calc(1em * 1.5 * 10);
+    resize: none;
+    border: none;
+}
+
+#texto_ingreso {
+    background-color: #F3F5FC;
+    font-size: 24px;
+    width: calc(100% - 200px);
+    margin-top: 110px;
+    flex-grow: 30;
+}
+
+#texto_resultado {
+    width: calc(100% - 44px);
+    margin: 20px 0px 20px 0px;
+    font-size: 18px;
+    height: 100%;
+}
+
+/* Texto de aviso del bloque 1 */
+#aviso {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+/* Partes del bloque 2 */
+#espera {
+    margin: auto;
+    height: 100%;
+    justify-content: center;
+}
+
+#resultado {
+    height: 100%;
+    margin: auto;
+    display: none;
+}
+
+.estado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+    height: 100%;
+    width: 398px;
+}
+
+.est1 {
+    justify-content: center;
+}
+
+.est1 img {
+    border: none;
+    resize: none;
+    font-size: 18px;
+    width: 336px;
+}
+
+#p_uno {
+    margin: 10px 50px;
+    font-size: 22px;
+}
+
+#p_dos {
+    margin: 0px 100px;
+    font-size: 15px;
+}
+
+/* Botones */
+button {
+    border: solid 1.5px #0A3871;
+    border-radius: 20px;
+    width: 250px;
+    height: 50px;
+}
+
+#boton_b1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.encriptar {
+    background: #124a8f;
+    color: #FFFFFF;
+    margin: 5px;
+}
+
+.desencriptar {
+    background: #D8DFE8;
+    color: #0A3871;
+    margin: 5px;
+}
+
+.copiar {
+    background-color: #FFFFFF;
+    color: #0A3871;
+    margin: 20px;
+}
+
+/* Botones acciones visuales */
+.encriptar:hover,
+.desencriptar:hover,
+.copiar:hover {
+    background: #82ace0;
+    color: #031024;
+    transition: .3s;
+}
+
+.encriptar:active,
+.desencriptar:active {
+    height: 40px;
+    width: 200px;
+    margin: 5px 30px;
+}
+
+.copiar:active {
+    height: 44px;
+    width: 220px;
+    margin: 23px 35px;
+}
+
+/* Animacion de alerta del bloque 2 */
+@keyframes animacion {
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Aparicion del bloque 2 */
+@keyframes aparicion {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Breakpoint para tablet */
+@media only screen and (max-width: 800px) {
+    body {
+        margin: 5px;
+    }
+
+    #contenedor {
+        flex-direction: column;
+        align-items: center;
+        width: calc(100% - 10px);
+        min-height: calc(100% - 10px);
+    }
+
+    .bl1 {
+        padding-bottom: 50px;
+    }
+
+    .bl2 {
+        padding-bottom: 5px;
+        max-width: 1000px;
+        width: 80%;
+        margin-bottom: 50px;
+    }
+
+    #texto_ingreso {
+        width: calc(100% - 8px);
+        height: calc(1em * 1.5 * 7);
+    }
+
+    #texto_resultado {
+        width: calc(100% - 44px);
+        height: calc(1em * 1.5 * 7);
+    }
+
+    .estado {
+        max-width: 500px;
+    }
+
+    .est1 img {
+        display: none;
+    }
+}
+/* Breakpoint para celular */
+@media only screen and (max-width: 480px) {
+    textarea {
+        height: calc(1em * 1.5 * 3);
+    }
+
+    .bl1 {
+        padding-bottom: 10px;
+    }
+
+    .bl2 {
+        padding-bottom: 5px;
+        max-width: 500px;
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .estado {
+        width: 100%;
+    }
+
+    .est1 img {
+        display: none;
+    }
+}
